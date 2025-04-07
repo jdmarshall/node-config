@@ -1,8 +1,15 @@
 name: PR Checks
 
 on:
+  push:
+    branches:
+      - master
+      - actions
   pull_request:
-    types: [opened, synchronize, reopened]
+    types:
+      - opened
+      - synchronize
+      - reopened
     branches:
       - master
 
@@ -21,7 +28,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22'
+          node-version: '10'
 
       - name: Install Dependencies
         run: npm install
