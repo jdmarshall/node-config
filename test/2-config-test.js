@@ -76,6 +76,10 @@ vows.describe('Test suite for node-config')
       assert.equal(CONFIG.ContainsQuote, '"this has a quote"');
     },
 
+    'Loading configurations from a JSONC file is correct': function() {
+      assert.equal(CONFIG.AnotherModule.parm1jsonc, 'value1-jsonc');
+    },
+
     'Loading configurations from a .yaml YAML file is correct': function() {
       assert.equal(CONFIG.AnotherModule.parm2, 'value2');
     },
@@ -110,6 +114,10 @@ vows.describe('Test suite for node-config')
 
     'Loading configurations from a XML file is correct': function() {
       assert.equal(CONFIG.AnotherModule.parm9, 'value9');
+    },
+
+    'Loading configurations from an MJS file is correct': function() {
+      assert.equal(CONFIG.AnotherModule.parm10, 'value10');
     },
 
     'Loading configurations from an environment file is correct': function() {
