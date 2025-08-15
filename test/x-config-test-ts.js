@@ -28,7 +28,7 @@ describe('Test suite for node-config TypeScript support with default export', fu
     // Disable after previous tests
     process.env.NODE_CONFIG_STRICT_MODE = false;
 
-    config = requireUncached(__dirname + '/../lib/config');
+    config = requireUncached(__dirname + '/../');
   });
 
   describe('Library initialization with TypeScript config files', function() {
@@ -48,7 +48,7 @@ describe('Test suite for node-config TypeScript support with default export', fu
       let existingHandler = require.extensions['.ts'];
       assert.ok(existingHandler, 'Existing handler is defined by the environment');
 
-      let config = requireUncached(__dirname + '/../lib/config');
+      let config = requireUncached(__dirname + '/../');
       assert.strictEqual(require.extensions['.ts'], existingHandler, 'Should not overwrite existing handler');
     });
   });

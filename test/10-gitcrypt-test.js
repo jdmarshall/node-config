@@ -25,7 +25,7 @@ describe('Test git-crypt integration', function() {
       delete process.env["NODE_CONFIG"]
       delete process.env["CUSTOM_JSON_ENVIRONMENT_VAR"];
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Config library is available', function() {
@@ -48,7 +48,7 @@ describe('Test git-crypt integration', function() {
 
       assert.throws(
         function () {
-          let config = requireUncached(__dirname + '/../lib/config');
+          let config = requireUncached(__dirname + '/../');
         },
         /Cannot parse config file/
       );

@@ -17,7 +17,7 @@ process.env.NODE_APP_INSTANCE='defer';
 
 // Because require'ing config creates and caches a global singleton,
 // We have to invalidate the cache to build new object based on the environment variables above
-var CONFIG = requireUncached(__dirname + '/../lib/config');
+var CONFIG = requireUncached(__dirname + '/../');
 
 describe('Tests for deferred values - JavaScript', function() {
   describe('Configuration file Tests', function() {

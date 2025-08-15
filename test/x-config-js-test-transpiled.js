@@ -20,7 +20,7 @@ describe('Test suite for node-config transpiled JS files', function() {
       // Disable after previous tests
       process.env.NODE_CONFIG_STRICT_MODE = false;
 
-      CONFIG = requireUncached(__dirname + '/../lib/config');
+      CONFIG = requireUncached(__dirname + '/../');
     });
 
     it('Config library is available', function() {

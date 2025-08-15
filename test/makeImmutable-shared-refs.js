@@ -2,7 +2,7 @@
 
 const { describe, it, beforeEach } = require('node:test');
 const assert = require('assert');
-const util = require('../lib/config.js').util;
+const util = require('..').util;
 
 /**
  * <p>Unit tests for makeImmutable shared reference cases</p>

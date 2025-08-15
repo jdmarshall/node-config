@@ -1,7 +1,6 @@
 'use strict';
 
 const path = require('path');
-const requireUncached = require('./_utils/requireUncached');
 const { describe, it, before, beforeEach } = require('node:test');
 const assert = require('assert');
 const { Load } = require(__dirname + '/../lib/util');

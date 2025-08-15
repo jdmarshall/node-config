@@ -8,7 +8,7 @@ process.env.NODE_CONFIG_DIR = __dirname + '/config';
 process.env.NODE_ENV = 'test';
 process.env.NODE_APP_INSTANCE = 'regexp';
 
-var CONFIG = requireUncached(__dirname + '/../lib/config');
+var CONFIG = requireUncached(__dirname + '/../');
 
 describe('Tests for regexp', function() {
   describe('Regexp tests Tests', function() {

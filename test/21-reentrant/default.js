@@ -1,4 +1,4 @@
-var util = require('../../lib/config').util;
+var util = require('../../').util;
 
 var config = {
   testValue : 'from js',

@@ -8,7 +8,7 @@ const requireUncached = require('./_utils/requireUncached');
 const { describe, it, before, beforeEach } = require('node:test');
 const assert = require('assert');
 
-const CONFIG = requireUncached(__dirname + '/../lib/config');
+const CONFIG = requireUncached(__dirname + '/../');
 
 describe('Tests for raw config values', function() {
   describe('Configuration file Tests', function() {

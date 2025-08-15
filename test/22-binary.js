@@ -15,7 +15,7 @@ describe('Tests for binary', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('A binary value should be immutable', function() {

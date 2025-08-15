@@ -7,7 +7,7 @@ const assert = require('assert');
 process.env.NODE_CONFIG_DIR = __dirname + '/config';
 process.env.NODE_ENV = 'test';
 
-var CONFIG = requireUncached(__dirname + '/../lib/config');
+var CONFIG = requireUncached(__dirname + '/../');
 
 describe('Tests for date', function() {
   describe('Date tests Tests', function() {

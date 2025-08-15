@@ -92,7 +92,7 @@ function _expectException (opts) {
 
       delete process.env.NODE_CONFIG;
       try {
-        let config = requireUncached(__dirname + '/../lib/config');
+        let config = requireUncached(__dirname + '/../');
       }
       catch (e) {
         error = e;

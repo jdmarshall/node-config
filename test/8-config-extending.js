@@ -17,7 +17,7 @@ delete process.env.NODE_APP_INSTANCE;
 
 process.env.NODE_CONFIG_STRICT_MODE = false;
 
-var CONFIG = requireUncached(__dirname + '/../lib/config');
+var CONFIG = requireUncached(__dirname + '/../');
 
 describe('Tests for config extending', function() {
   describe('Extending a base configuration with another configuration', function() {

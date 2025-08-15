@@ -28,7 +28,7 @@ describe('Test suite for node-config TypeScript support with module.exports', fu
     // Disable after previous tests
     process.env.NODE_CONFIG_STRICT_MODE = false;
 
-    config = requireUncached(__dirname + '/../lib/config');
+    config = requireUncached(__dirname + '/../');
   });
 
   describe('Library initialization with TypeScript config files', function() {

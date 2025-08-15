@@ -46,7 +46,7 @@ describe('Protected (hackable) utilities test', function() {
     // Test Environment Variable Substitution
     process.env['CUSTOM_JSON_ENVIRONMENT_VAR'] = 'CUSTOM VALUE FROM JSON ENV MAPPING';
 
-    config = requireUncached(__dirname + '/../lib/config');
+    config = requireUncached(__dirname + '/../');
   });
 
   describe('Library initialization', function () {

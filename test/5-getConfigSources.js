@@ -19,7 +19,7 @@ describe('Tests config.util.getConfigSources', function() {
       process.env.NODE_CONFIG_STRICT_MODE=0;
       process.argv = ["node","path/to/some.js","--NODE_CONFIG={}"];
 
-      let config = requireUncached(__dirname + '/../lib/config');
+      let config = requireUncached(__dirname + '/../');
 
       sources =  config.util.getConfigSources();
     });
@@ -47,7 +47,7 @@ describe('Tests config.util.getConfigSources', function() {
       process.env.NODE_CONFIG_STRICT_MODE=0;
       process.argv = [];
 
-      var config = requireUncached(__dirname + '/../lib/config');
+      var config = requireUncached(__dirname + '/../');
 
       sources = config.util.getConfigSources();
     });
@@ -73,7 +73,7 @@ describe('Tests config.util.getConfigSources', function() {
       delete process.env.NODE_APP_INSTANCE;
       process.argv = [];
 
-      let config = requireUncached(__dirname + '/../lib/config');
+      let config = requireUncached(__dirname + '/../');
       sources = config.util.getConfigSources();
     });
 
@@ -98,7 +98,7 @@ describe('Tests config.util.getConfigSources', function() {
     delete process.env.NODE_APP_INSTANCE;
     process.argv = [];
 
-    let config = requireUncached(__dirname + '/../lib/config');
+    let config = requireUncached(__dirname + '/../');
     sources = config.util.getConfigSources();
   });
 

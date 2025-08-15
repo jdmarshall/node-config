@@ -10,7 +10,7 @@ describe('Tests for parsing TOML files', function() {
     let config;
     beforeEach(function() {
       process.env.NODE_CONFIG_DIR = __dirname + '/17-config';
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('validate array of tables is supported', function() {

@@ -13,7 +13,7 @@ describe('Tests for multiple config', function() {
     ].join(path.delimiter)
 
     assert.doesNotThrow(function () {
-      const CONFIG = requireUncached(__dirname + '/../lib/config');
+      const CONFIG = requireUncached(__dirname + '/../');
     }, 'Adding multiple relative configuration paths has an error');
 
   });
@@ -25,7 +25,7 @@ describe('Tests for multiple config', function() {
     ].join(path.delimiter)
 
     assert.doesNotThrow(function () {
-      const CONFIG = requireUncached(__dirname + '/../lib/config');
+      const CONFIG = requireUncached(__dirname + '/../');
     }, 'Adding multiple absolute configuration paths has an error');
 
   });
@@ -37,7 +37,7 @@ describe('Tests for multiple config', function() {
     ].join(path.delimiter)
 
     assert.doesNotThrow(function () {
-      const CONFIG = requireUncached(__dirname + '/../lib/config');
+      const CONFIG = requireUncached(__dirname + '/../');
     }, 'Adding one absolute and one relative configuration paths has an error');
   });
 
@@ -48,7 +48,7 @@ describe('Tests for multiple config', function() {
     ].join(path.delimiter)
 
     assert.doesNotThrow(function () {
-      const CONFIG = requireUncached(__dirname + '/../lib/config');
+      const CONFIG = requireUncached(__dirname + '/../');
     }, 'Adding one relative and one absolute configuration paths has an error');
   });
 
@@ -59,7 +59,7 @@ describe('Tests for multiple config', function() {
     ].join(path.delimiter)
 
     assert.doesNotThrow(function () {
-      const CONFIG = requireUncached(__dirname + '/../lib/config');
+      const CONFIG = requireUncached(__dirname + '/../');
     }, 'Adding an empty string does not result in an error');
   });
 });

@@ -21,7 +21,7 @@ process.env.NODE_APP_INSTANCE='array-merge';
 
 // Because require'ing config creates and caches a global singleton,
 // We have to invalidate the cache to build new object based on the environment variables above
-var CONFIG = requireUncached(__dirname + '/../lib/config');
+var CONFIG = requireUncached(__dirname + '/../');
 
 describe('Tests for merging arrays', function() {
   describe('Array merging tests Tests', function() {

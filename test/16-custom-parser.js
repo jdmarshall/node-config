@@ -13,7 +13,7 @@ describe('Tests for a custom parser provided by NODE_CONFIG_PARSER', function() 
     beforeEach(function() {
       process.env.NODE_CONFIG_DIR = __dirname + '/16-config';
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('validate default parser order', function() {
@@ -31,7 +31,7 @@ describe('Tests for a custom parser provided by NODE_CONFIG_PARSER', function() 
       process.env.NODE_CONFIG_DIR = __dirname + '/16-config';
       process.env.NODE_CONFIG_PARSER = __dirname + '/16-config/parser/custom-1';
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('validate changes to parser order', function() {
@@ -50,7 +50,7 @@ describe('Tests for a custom parser provided by NODE_CONFIG_PARSER', function() 
       process.env.NODE_CONFIG_DIR = __dirname + '/16-config';
       process.env.NODE_CONFIG_PARSER = __dirname + '/16-config/parser/custom-2';
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('validate changes to parser order', function() {
@@ -68,7 +68,7 @@ describe('Tests for a custom parser provided by NODE_CONFIG_PARSER', function() 
       process.env.NODE_CONFIG_DIR = __dirname + '/16-config';
       process.env.NODE_CONFIG_PARSER = __dirname + '/16-config/parser/custom-3';
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('validate changes to parser logic', function() {

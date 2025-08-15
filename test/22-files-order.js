@@ -27,7 +27,7 @@ describe("Test suite for node-config", function() {
       // Test for multi-instance applications
       process.env.NODE_APP_INSTANCE = "instance";
 
-      config = requireUncached(__dirname + "/../lib/config");
+      config = requireUncached(__dirname + "/../");
     });
 
     it("Config files have been loaded in right order", function () {

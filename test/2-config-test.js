@@ -46,7 +46,7 @@ describe('Test suite for node-config', function() {
       process.env.CUSTOM_NUMBER_EMPTY_ENVIRONMENT_VAR = '';
       process.env.CUSTOM_NUMBER_STRING_ENVIRONMENT_VAR = 'String';
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Config library is available', function() {
@@ -62,7 +62,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Loading configurations from a JS module is correct', function() {
@@ -139,7 +139,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Correct mute setup var', function () {
@@ -182,7 +182,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Configuration can come from the $NODE_CONFIG environment', function() {
@@ -198,7 +198,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Configuration can come from the --NODE_CONFIG command line argument', function() {
@@ -214,7 +214,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     // only testing the `custom-environment-variables.json` now
@@ -264,7 +264,7 @@ describe('Test suite for node-config', function() {
     // Support old two and three argument pattern;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
 
       config.util.makeImmutable(config.TestModule, 'parm1');
     });
@@ -284,7 +284,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Correctly unable to change an immutable property', function() {
@@ -312,7 +312,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('The function exists', function() {
@@ -386,7 +386,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('The function exists', function() {
@@ -435,7 +435,7 @@ describe('Test suite for node-config', function() {
     let config;
 
     beforeEach(function() {
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('The setModuleDefaults() method is available', function() {
@@ -485,7 +485,7 @@ describe('Test suite for node-config', function() {
     it('Config.get() before setModuleDefaults() can see updates', function() {
       process.env.ALLOW_CONFIG_MUTATIONS = true;
 
-      const mutableConfig = requireUncached(__dirname + '/../lib/config');
+      const mutableConfig = requireUncached(__dirname + '/../');
 
       let defaults = {
         someValue: "default"
@@ -549,7 +549,7 @@ describe('Test suite for node-config', function() {
       // Test Environment Variable Substitution
       process.env.CUSTOM_JSON_ENVIRONMENT_VAR = 'CUSTOM VALUE FROM JSON ENV MAPPING';
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Config library is available', function() {

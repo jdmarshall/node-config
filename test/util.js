@@ -4,7 +4,7 @@ const path = require('path');
 const requireUncached = require('./_utils/requireUncached');
 const { describe, it, beforeEach } = require('node:test');
 const assert = require('assert');
-const config = require('../lib/config');
+const config = require('..');
 const initParam = config.util.initParam;
 
 describe('Tests for config util functions', function() {
@@ -19,7 +19,7 @@ describe('Tests for config util functions', function() {
       delete process.env.NODE_APP_INSTANCE;
       process.env.NODE_CONFIG_ENV = 'test';
 
-      util = requireUncached(__dirname + '/../lib/config').util;
+      util = requireUncached(__dirname + '/../').util;
     });
 
     it('can load data from a given directory', function () {

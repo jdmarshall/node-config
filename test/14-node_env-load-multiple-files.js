@@ -12,7 +12,7 @@ describe('Tests for load multiple config files that match NODE_ENV values', func
       process.env.NODE_ENV = 'development,cloud'
       process.env.NODE_CONFIG_DIR = __dirname + '/14-config'
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Values of the corresponding files are loaded', function() {
@@ -34,7 +34,7 @@ describe('Tests for load multiple config files that match NODE_ENV values', func
       process.env.NODE_CONFIG_DIR = __dirname + '/14-config'
       process.env.HOST = 'test'
 
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Values of the corresponding files with host prefix are loaded', function()  {
@@ -49,7 +49,7 @@ describe('Tests for load multiple config files that match NODE_ENV values', func
     beforeEach(function() {
       process.env.NODE_ENV = 'cloud,bare-metal'
       process.env.NODE_CONFIG_DIR = __dirname + '/14-config'
-      config = requireUncached(__dirname + '/../lib/config');
+      config = requireUncached(__dirname + '/../');
     });
 
     it('Priority of file values is merged by order that was defined in NODE_ENV', function(){
