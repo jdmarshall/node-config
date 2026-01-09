@@ -1,1 +1,1 @@
-module.exports = require("./lib/raw");
+module.exports = require("./lib/raw.mjs");

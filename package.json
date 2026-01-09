@@ -17,6 +17,11 @@
     "env",
     "environment"
   ],
+  "exports": {
+    ".": "./lib/config.mjs",
+    "Util": "./lib/util.mjs",
+    "defer": "./defer.mjs"
+  },
   "directories": {
     "lib": "./lib"
   },

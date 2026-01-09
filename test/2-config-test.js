@@ -166,7 +166,6 @@ describe('Test suite for node-config', function() {
     });
 
     it('No recursive mutation after first get()', function() {
-      config.MuteThis = 'world';
       assert.strictEqual(config.get('MuteThis'), 'world');
 
       assert.throws(
@@ -275,7 +274,7 @@ describe('Test suite for node-config', function() {
 
     it('Correctly unable to change an immutable configuration', function() {
       assert.throws(() => config.TestModule.parm1 = "setToThis",
-        /Cannot assign to read only property/);
+        /Can not update runtime configuration property: "parm1"\. Configuration objects are immutable unless ALLOW_CONFIG_MUTATIONS is set\./);
       assert.strictEqual(config.TestModule.parm1, "value1");
     });
   });

@@ -1,1 +1,1 @@
-module.exports = require("./lib/defer");
+module.exports = require("./lib/defer.mjs");
