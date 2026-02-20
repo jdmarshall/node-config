@@ -12,8 +12,8 @@ const loadedHas: boolean = loaded.number === 42;
 
 const stripped: string = config.util.stripYamlComments('# comment');
 
+config.util.makeImmutable();
 config.util.makeImmutable({ a: 1 });
-config.util.makeImmutable({ a: 1 }, 'a', 2);
 
 const sources = config.util.getConfigSources();
 sources.forEach((source) => {
