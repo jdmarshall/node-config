@@ -349,6 +349,24 @@ describe('Tests for util functions', function () {
       assert.notDeepEqual(copy, orig);
     });
 
+    it('Preserves all regexp flags and lastIndex when cloning', function () {
+      for (const flags of ['', 'gim', 'dgimsuy', 'dgimsvy']) {
+        const regexp = new RegExp('test', flags);
+        regexp.lastIndex = 2;
+        const copy = util.cloneDeep({regexp}).regexp;
+
+        assert.notStrictEqual(copy, regexp);
+        assert.strictEqual(copy.source, regexp.source);
+        assert.strictEqual(copy.flags, flags);
+        assert.strictEqual(copy.lastIndex, 2);
+      }
+    });
+
+    it('Preserves dotAll and Unicode matching when cloning', function () {
+      assert.ok(util.cloneDeep(/a.b/s).test('a\nb'));
+      assert.ok(util.cloneDeep(/^.$/u).test('\u{10400}'));
+    });
+
     it('Regexps and dates are preserved', function () {
       var copy = util.cloneDeep(orig);
       assert.strictEqual(copy.elem6.date.constructor.name, 'Date');
